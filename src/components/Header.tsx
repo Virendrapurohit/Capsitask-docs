@@ -60,7 +60,7 @@ const AppHeader: React.FC = () => {
               style={{ fontSize: "16px", width: 64, height: 64 }}
             />
           )}
-          <h3 style={{ margin: "0px" }}>Project Documentation</h3>
+          <h3 style={{ margin: "0px" ,fontWeight:500 }}>Capsitask Documentation</h3>
           <div>
             <Search placeholder="Search" />
           </div>

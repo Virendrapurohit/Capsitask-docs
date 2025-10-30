@@ -10,7 +10,7 @@ import { PiMicrosoftTeamsLogoLight } from "react-icons/pi";
 import { SettingOutlined, TeamOutlined } from "@ant-design/icons";
 import { Menu, theme } from "antd";
 import Sider from "antd/es/layout/Sider";
-
+import { RiLayout2Line } from "react-icons/ri";
 const Sidebar: React.FC = () => {
   const navigate = useNavigate();
   const {
@@ -51,87 +51,93 @@ const Sidebar: React.FC = () => {
       <Menu
         theme="light"
         mode="inline"
-        defaultSelectedKeys={["/admin-dashboard/admindashboard"]}
+        defaultSelectedKeys={["/admin-dashboard/layout"]}
         defaultOpenKeys={["1"]}
         onClick={handleMenuClick}
         style={{
           borderRight: 0,
           backgroundColor: colorBgContainer,
           overflow: "auto",
+          marginTop: 12,
         }}
         items={[
+          // {
+          //   key: "1",
+          //   label: "Overview",
+          //   children: [
           {
-            key: "1",
-            label: "Admin Panel",
-            children: [
-              {
-                key: "/admin-dashboard/admindashboard",
-                label: "Dashboard",
-                icon: <RiDashboardLine size={18} />,
-              },
-              {
-                key: "/admin-dashboard/dashboard",
-                label: "Task Review",
-                icon: <FaRegStar size={18} />,
-              },
-              {
-                key: "/admin-dashboard/feedback",
-                label: "Feedback",
-                icon: <VscFeedback size={18} />,
-              },
-              {
-                key: "/admin-dashboard/board",
-                label: "Board",
-                icon: <AiOutlineLayout size={18} />,
-              },
-              {
-                key: "/admin-dashboard/backlog",
-                icon: <MdOutlineViewList size={18} />,
-                label: "Backlog",
-              },
-              {
-                key: "/admin-dashboard/people",
-                icon: <TeamOutlined size={20} />,
-                label: "People",
-              },
-              {
-                key: "/admin-dashboard/reports",
-                label: "Reports",
-                icon: <FaRegChartBar size={18} />,
-              },
-              {
-                key: "/admin-dashboard/teams",
-                label: "Teams",
-                icon: <PiMicrosoftTeamsLogoLight size={18} />,
-              },
-              {
-                key: "/admin-dashboard/calendar",
-                label: "Calendar",
-                icon: <FiCalendar size={18} />,
-              },
-              {
-                key: "/admin-dashboard/timeline",
-                label: "Timeline",
-                icon: <FcTimeline size={18} />,
-              },
-              {
-                key: "/admin-dashboard/settings",
-                label: "Settings",
-                icon: <SettingOutlined size={18} />,
-              },
-            ],
+            key: "/admin-dashboard/layout",
+            label: "Layout",
+            icon: <RiLayout2Line size={20} style={{color: "#4285f4" }} />,
           },
           {
-            key: "2",
-            label: "Employee Panel",
-            children: [
-              {
-                key: "/user-dashboard/admindashboard",
-                label: "Dashboard",
-                icon: <RiDashboardLine size={18} />,
-              },
-            ],
+            key: "/admin-dashboard/admindashboard",
+            label: "Dashboard",
+            icon: <RiDashboardLine size={20} style={{color: "#4285f4" }} />,
           },
+          {
+            key: "/admin-dashboard/dashboard",
+            label: "Task Review",
+            icon: <FaRegStar size={20} style={{color: "#4285f4" }} />,
+          },
+          {
+            key: "/admin-dashboard/feedback",
+            label: "Feedback",
+            icon: <VscFeedback size={20} style={{color: "#4285f4" }} />,
+          },
+          {
+            key: "/admin-dashboard/board",
+            label: "Board",
+            icon: <AiOutlineLayout size={20} style={{color: "#4285f4" }} />,
+          },
+          {
+            key: "/admin-dashboard/backlog",
+            icon: <MdOutlineViewList  style={{color: "#4285f4"  ,fontSize: 22 }} />,
+            label: "Backlog",
+          },
+          {
+            key: "/admin-dashboard/people",
+            icon: <TeamOutlined style={{color: "#4285f4" ,fontSize: 20 }} />,
+            label: "People",
+          },
+          {
+            key: "/admin-dashboard/reports",
+            label: "Reports",
+            icon: <FaRegChartBar size={20} style={{color: "#4285f4" }} />,
+          },
+          {
+            key: "/admin-dashboard/teams",
+            label: "Teams",
+            icon: <PiMicrosoftTeamsLogoLight style={{color: "#4285f4" ,fontSize: 21 }} />,
+          },
+          {
+            key: "/admin-dashboard/calendar",
+            label: "Calendar",
+            icon: <FiCalendar size={20} style={{color: "#4285f4" }} />,
+          },
+          {
+            key: "/admin-dashboard/timeline",
+            label: "Timeline",
+            icon: <FcTimeline style={{color: "#4285f4"  ,fontSize: 20 }} />,
+          },
+          {
+            key: "/admin-dashboard/settings",
+            label: "Settings",
+            icon: <SettingOutlined  style={{color: "#4285f4" ,fontSize: 20 }} />,
+          },
+          //   ],
+          // },
+          // {
+          //   key: "2",
+          //   label: "Employee Panel",
+          //   children: [
+          //     {
+          //       key: "/user-dashboard/admindashboard",
+          //       label: "Dashboard",
+          //       icon: <RiDashboardLine size={18} />,
+          //     },
+          //   ],
+          // },
         ]}
       />
     </Sider>
