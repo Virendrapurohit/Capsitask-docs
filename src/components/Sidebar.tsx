@@ -79,7 +79,7 @@ const Sidebar: React.FC = () => {
             icon: <RiDashboardLine size={20} style={{ color: "#4285f4" }} />,
           },
           {
-            key: "/admin-dashboard/dashboard",
+            key: "/admin-dashboard/taskreview",
             label: "Task Review",
             icon: <FaRegStar size={20} style={{ color: "#4285f4" }} />,
           },
