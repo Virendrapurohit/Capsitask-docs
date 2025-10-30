@@ -3,6 +3,7 @@ import AdminDashboard from "./pages/admin-dashboard/AdminDashboard";
 import Adminlayout from "./pages/admin-dashboard/Layout";
 import FeedBack from "./pages/admin-dashboard/FeedBack";
 import TaskReview from "./pages/admin-dashboard/TaskReview";
+import Board from "./pages/admin-dashboard/Board";
 
 const AppRoutes = () => {
   return (
@@ -16,6 +17,7 @@ const AppRoutes = () => {
       />
       <Route path="/admin-dashboard/feedback" element={<FeedBack />} />
        <Route path="/admin-dashboard/taskreview" element={<TaskReview />} />
+       <Route path="/admin-dashboard/board" element={<Board />} />
     </Routes>
   );
 };

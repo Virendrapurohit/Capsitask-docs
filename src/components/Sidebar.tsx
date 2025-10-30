@@ -3,7 +3,6 @@ import { RiDashboardLine } from "react-icons/ri";
 import { FaRegChartBar, FaRegStar } from "react-icons/fa";
 import { VscFeedback } from "react-icons/vsc";
 import { AiOutlineLayout } from "react-icons/ai";
-import { MdOutlineViewList } from "react-icons/md";
 import { FcTimeline } from "react-icons/fc";
 import { FiCalendar } from "react-icons/fi";
 import { PiMicrosoftTeamsLogoLight } from "react-icons/pi";
@@ -90,16 +89,16 @@ const Sidebar: React.FC = () => {
           },
           {
             key: "/admin-dashboard/board",
-            label: "Board",
+            label: "Board & Backlog",
             icon: <AiOutlineLayout size={20} style={{ color: "#4285f4" }} />,
           },
-          {
-            key: "/admin-dashboard/backlog",
-            icon: (
-              <MdOutlineViewList style={{ color: "#4285f4", fontSize: 22 }} />
-            ),
-            label: "Backlog",
-          },
+          // {
+          //   key: "/admin-dashboard/backlog",
+          //   icon: (
+          //     <MdOutlineViewList style={{ color: "#4285f4", fontSize: 22 }} />
+          //   ),
+          //   label: "Backlog",
+          // },
           {
             key: "/admin-dashboard/people",
             icon: <TeamOutlined style={{ color: "#4285f4", fontSize: 20 }} />,
