@@ -1,4 +1,4 @@
-import { useNavigate } from "react-router-dom";
+import { useLocation, useNavigate } from "react-router-dom";
 import { RiDashboardLine } from "react-icons/ri";
 import { FaRegChartBar, FaRegStar } from "react-icons/fa";
 import { VscFeedback } from "react-icons/vsc";
@@ -13,6 +13,8 @@ import Sider from "antd/es/layout/Sider";
 import { RiLayout2Line } from "react-icons/ri";
 const Sidebar: React.FC = () => {
   const navigate = useNavigate();
+  const navigation = useLocation();
+  const pathname = navigation.pathname;
   const {
     token: { colorBgContainer },
   } = theme.useToken();
@@ -51,6 +53,7 @@ const Sidebar: React.FC = () => {
       <Menu
         theme="light"
         mode="inline"
+        selectedKeys={[pathname]}
         defaultSelectedKeys={["/admin-dashboard/layout"]}
         defaultOpenKeys={["1"]}
         onClick={handleMenuClick}
@@ -68,62 +71,70 @@ const Sidebar: React.FC = () => {
           {
             key: "/admin-dashboard/layout",
             label: "Layout",
-            icon: <RiLayout2Line size={20} style={{color: "#4285f4" }} />,
+            icon: <RiLayout2Line size={20} style={{ color: "#4285f4" }} />,
           },
           {
             key: "/admin-dashboard/admindashboard",
             label: "Dashboard",
-            icon: <RiDashboardLine size={20} style={{color: "#4285f4" }} />,
+            icon: <RiDashboardLine size={20} style={{ color: "#4285f4" }} />,
           },
           {
             key: "/admin-dashboard/dashboard",
             label: "Task Review",
-            icon: <FaRegStar size={20} style={{color: "#4285f4" }} />,
+            icon: <FaRegStar size={20} style={{ color: "#4285f4" }} />,
           },
           {
             key: "/admin-dashboard/feedback",
             label: "Feedback",
-            icon: <VscFeedback size={20} style={{color: "#4285f4" }} />,
+            icon: <VscFeedback size={20} style={{ color: "#4285f4" }} />,
           },
           {
             key: "/admin-dashboard/board",
             label: "Board",
-            icon: <AiOutlineLayout size={20} style={{color: "#4285f4" }} />,
+            icon: <AiOutlineLayout size={20} style={{ color: "#4285f4" }} />,
           },
           {
             key: "/admin-dashboard/backlog",
-            icon: <MdOutlineViewList  style={{color: "#4285f4"  ,fontSize: 22 }} />,
+            icon: (
+              <MdOutlineViewList style={{ color: "#4285f4", fontSize: 22 }} />
+            ),
             label: "Backlog",
           },
           {
             key: "/admin-dashboard/people",
-            icon: <TeamOutlined style={{color: "#4285f4" ,fontSize: 20 }} />,
+            icon: <TeamOutlined style={{ color: "#4285f4", fontSize: 20 }} />,
             label: "People",
           },
           {
             key: "/admin-dashboard/reports",
             label: "Reports",
-            icon: <FaRegChartBar size={20} style={{color: "#4285f4" }} />,
+            icon: <FaRegChartBar size={20} style={{ color: "#4285f4" }} />,
           },
           {
             key: "/admin-dashboard/teams",
             label: "Teams",
-            icon: <PiMicrosoftTeamsLogoLight style={{color: "#4285f4" ,fontSize: 21 }} />,
+            icon: (
+              <PiMicrosoftTeamsLogoLight
+                style={{ color: "#4285f4", fontSize: 21 }}
+              />
+            ),
           },
           {
             key: "/admin-dashboard/calendar",
             label: "Calendar",
-            icon: <FiCalendar size={20} style={{color: "#4285f4" }} />,
+            icon: <FiCalendar size={20} style={{ color: "#4285f4" }} />,
           },
           {
             key: "/admin-dashboard/timeline",
             label: "Timeline",
-            icon: <FcTimeline style={{color: "#4285f4"  ,fontSize: 20 }} />,
+            icon: <FcTimeline style={{ color: "#4285f4", fontSize: 20 }} />,
           },
           {
             key: "/admin-dashboard/settings",
             label: "Settings",
-            icon: <SettingOutlined  style={{color: "#4285f4" ,fontSize: 20 }} />,
+            icon: (
+              <SettingOutlined style={{ color: "#4285f4", fontSize: 20 }} />
+            ),
           },
           //   ],
           // },

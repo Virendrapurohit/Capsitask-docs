@@ -8,6 +8,7 @@
 body {
   margin: 0;
   padding: 0;
+  overflow: hidden;
 }
 
 ::-webkit-scrollbar {
@@ -17,7 +18,6 @@ body {
 
 ::-webkit-scrollbar-thumb {
   background-color: rgba(0, 0, 0, 0.1);
-  border-radius: 10px;
   border: 2px solid transparent;
   background-clip: content-box;
 }
@@ -28,4 +28,12 @@ body {
   flex-direction: column;
   min-height: 0;
   background: #fbfbfb !import;
+}
+
+:where(.css-dev-only-do-not-override-ac2jek).ant-menu-light.ant-menu-inline
+  .ant-menu-sub.ant-menu-inline,
+:where(.css-dev-only-do-not-override-ac2jek).ant-menu-light
+  > .ant-menu.ant-menu-inline
+  .ant-menu-sub.ant-menu-inline {
+  background: white !important;
 }
