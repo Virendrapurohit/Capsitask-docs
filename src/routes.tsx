@@ -6,6 +6,7 @@ import TaskReview from "./pages/admin-dashboard/TaskReview";
 import Board from "./pages/admin-dashboard/Board";
 import People from "./pages/admin-dashboard/People";
 import Reports from "./pages/admin-dashboard/Reports";
+import Teams from "./pages/admin-dashboard/Teams";
 
 const AppRoutes = () => {
   return (
@@ -21,7 +22,8 @@ const AppRoutes = () => {
       <Route path="/admin-dashboard/taskreview" element={<TaskReview />} />
       <Route path="/admin-dashboard/board" element={<Board />} />
       <Route path="/admin-dashboard/people" element={<People />} />
-        <Route path="/admin-dashboard/reports" element={<Reports />} />
+      <Route path="/admin-dashboard/reports" element={<Reports />} />
+      <Route path="/admin-dashboard/teams" element={<Teams />} />
     </Routes>
   );
 };
