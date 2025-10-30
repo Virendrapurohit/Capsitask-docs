@@ -4,7 +4,7 @@ import { Layout, Row, Col, Typography, Image, Anchor, Card } from "antd";
 const { Content } = Layout;
 const { Title, Paragraph } = Typography;
 
-const AdminDashboard: React.FC = () => {
+const Feedback: React.FC = () => {
   const scrollContainerRef = React.useRef<HTMLDivElement>(null);
 
   return (
@@ -167,4 +167,4 @@ const AdminDashboard: React.FC = () => {
   );
 };
 
-export default AdminDashboard;
+export default Feedback;
