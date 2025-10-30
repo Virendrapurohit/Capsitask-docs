@@ -92,13 +92,6 @@ const Sidebar: React.FC = () => {
             label: "Board & Backlog",
             icon: <AiOutlineLayout size={20} style={{ color: "#4285f4" }} />,
           },
-          // {
-          //   key: "/admin-dashboard/backlog",
-          //   icon: (
-          //     <MdOutlineViewList style={{ color: "#4285f4", fontSize: 22 }} />
-          //   ),
-          //   label: "Backlog",
-          // },
           {
             key: "/admin-dashboard/people",
             icon: <TeamOutlined style={{ color: "#4285f4", fontSize: 20 }} />,

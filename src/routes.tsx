@@ -4,6 +4,7 @@ import Adminlayout from "./pages/admin-dashboard/Layout";
 import FeedBack from "./pages/admin-dashboard/FeedBack";
 import TaskReview from "./pages/admin-dashboard/TaskReview";
 import Board from "./pages/admin-dashboard/Board";
+import People from "./pages/admin-dashboard/People";
 
 const AppRoutes = () => {
   return (
@@ -16,8 +17,9 @@ const AppRoutes = () => {
         element={<AdminDashboard />}
       />
       <Route path="/admin-dashboard/feedback" element={<FeedBack />} />
-       <Route path="/admin-dashboard/taskreview" element={<TaskReview />} />
-       <Route path="/admin-dashboard/board" element={<Board />} />
+      <Route path="/admin-dashboard/taskreview" element={<TaskReview />} />
+      <Route path="/admin-dashboard/board" element={<Board />} />
+      <Route path="/admin-dashboard/people" element={<People />} />
     </Routes>
   );
 };
