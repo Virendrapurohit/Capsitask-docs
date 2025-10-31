@@ -10,11 +10,13 @@ import Teams from "./pages/admin-dashboard/Teams";
 import CalendarCreate from "./pages/admin-dashboard/Calendar";
 import TimeLine from "./pages/admin-dashboard/TimeLine";
 import Settings from "./pages/admin-dashboard/Settings";
+import OverviewProject from "./pages/admin-dashboard/Overview";
 
 const AppRoutes = () => {
   return (
     <Routes>
-      <Route path="/" element={<Navigate to="/admin-dashboard/layout" />} />
+      <Route path="/" element={<Navigate to="/admin-dashboard/overview" />} />
+      <Route path="/admin-dashboard/overview" element={<OverviewProject />} />
       <Route path="/admin-dashboard/layout" element={<Adminlayout />} />
 
       <Route
@@ -29,7 +31,7 @@ const AppRoutes = () => {
       <Route path="/admin-dashboard/teams" element={<Teams />} />
       <Route path="/admin-dashboard/calendar" element={<CalendarCreate />} />
       <Route path="/admin-dashboard/timeline" element={<TimeLine />} />
-       <Route path="/admin-dashboard/settings" element={<Settings />} />
+      <Route path="/admin-dashboard/settings" element={<Settings />} />
     </Routes>
   );
 };

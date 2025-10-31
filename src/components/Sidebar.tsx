@@ -59,6 +59,11 @@ const Sidebar: React.FC<{ isDarkTheme: boolean }> = ({ isDarkTheme }) => {
           marginTop: 12,
         }}
         items={[
+            {
+            key: "/admin-dashboard/overview",
+            label: "Overview",
+            // icon: <RiLayout2Line size={20} />,
+          },
           {
             key: "/admin-dashboard/layout",
             label: "Layout",
