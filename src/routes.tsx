@@ -7,6 +7,9 @@ import Board from "./pages/admin-dashboard/Board";
 import People from "./pages/admin-dashboard/People";
 import Reports from "./pages/admin-dashboard/Reports";
 import Teams from "./pages/admin-dashboard/Teams";
+import CalendarCreate from "./pages/admin-dashboard/Calendar";
+
+
 
 const AppRoutes = () => {
   return (
@@ -24,6 +27,7 @@ const AppRoutes = () => {
       <Route path="/admin-dashboard/people" element={<People />} />
       <Route path="/admin-dashboard/reports" element={<Reports />} />
       <Route path="/admin-dashboard/teams" element={<Teams />} />
+      <Route path="/admin-dashboard/calendar" element={<CalendarCreate />} />
     </Routes>
   );
 };
