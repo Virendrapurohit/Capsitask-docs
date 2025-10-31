@@ -40,7 +40,7 @@ const Sidebar: React.FC<{ isDarkTheme: boolean }> = ({ isDarkTheme }) => {
       >
         <img
           style={{ height: 52, cursor: "pointer" }}
-          src={"/admin-dashboard/CapsiTask.png"}
+          src={"/CapsiTask.png"}
           alt="Logo"
         />
       </div>
