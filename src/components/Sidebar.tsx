@@ -62,63 +62,57 @@ const Sidebar: React.FC<{ isDarkTheme: boolean }> = ({ isDarkTheme }) => {
           {
             key: "/admin-dashboard/layout",
             label: "Layout",
-            icon: <RiLayout2Line size={20} style={{ color: "#4285f4" }} />,
+            icon: <RiLayout2Line size={20} />,
           },
           {
             key: "/admin-dashboard/admindashboard",
             label: "Dashboard",
-            icon: <RiDashboardLine size={20} style={{ color: "#4285f4" }} />,
+            icon: <RiDashboardLine size={20} />,
           },
           {
             key: "/admin-dashboard/taskreview",
             label: "Task Review",
-            icon: <FaRegStar size={20} style={{ color: "#4285f4" }} />,
+            icon: <FaRegStar size={20} />,
           },
           {
             key: "/admin-dashboard/feedback",
             label: "Feedback",
-            icon: <VscFeedback size={20} style={{ color: "#4285f4" }} />,
+            icon: <VscFeedback size={20} />,
           },
           {
             key: "/admin-dashboard/board",
             label: "Board & Backlog",
-            icon: <AiOutlineLayout size={20} style={{ color: "#4285f4" }} />,
+            icon: <AiOutlineLayout size={20} />,
           },
           {
             key: "/admin-dashboard/people",
-            icon: <TeamOutlined style={{ color: "#4285f4", fontSize: 20 }} />,
+            icon: <TeamOutlined style={{ fontSize: 20 }} />,
             label: "People",
           },
           {
             key: "/admin-dashboard/reports",
             label: "Reports",
-            icon: <FaRegChartBar size={20} style={{ color: "#4285f4" }} />,
+            icon: <FaRegChartBar size={20} />,
           },
           {
             key: "/admin-dashboard/teams",
             label: "Teams",
-            icon: (
-              <PiMicrosoftTeamsLogoLight
-                style={{ color: "#4285f4", fontSize: 21 }}
-              />
-            ),
+            icon: <PiMicrosoftTeamsLogoLight style={{ fontSize: 21 }} />,
           },
           {
             key: "/admin-dashboard/calendar",
             label: "Calendar",
-            icon: <FiCalendar size={20} style={{ color: "#4285f4" }} />,
+            icon: <FiCalendar size={20} />,
           },
           {
             key: "/admin-dashboard/timeline",
             label: "Timeline",
-            icon: <FcTimeline style={{ color: "#4285f4", fontSize: 20 }} />,
+            icon: <FcTimeline style={{ fontSize: 20 }} />,
           },
           {
             key: "/admin-dashboard/settings",
             label: "Settings",
-            icon: (
-              <SettingOutlined style={{ color: "#4285f4", fontSize: 20 }} />
-            ),
+            icon: <SettingOutlined style={{ fontSize: 20 }} />,
           },
         ]}
       />
