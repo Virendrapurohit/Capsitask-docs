@@ -9,6 +9,7 @@ import Reports from "./pages/admin-dashboard/Reports";
 import Teams from "./pages/admin-dashboard/Teams";
 import CalendarCreate from "./pages/admin-dashboard/Calendar";
 import TimeLine from "./pages/admin-dashboard/TimeLine";
+import Settings from "./pages/admin-dashboard/Settings";
 
 const AppRoutes = () => {
   return (
@@ -28,6 +29,7 @@ const AppRoutes = () => {
       <Route path="/admin-dashboard/teams" element={<Teams />} />
       <Route path="/admin-dashboard/calendar" element={<CalendarCreate />} />
       <Route path="/admin-dashboard/timeline" element={<TimeLine />} />
+       <Route path="/admin-dashboard/settings" element={<Settings />} />
     </Routes>
   );
 };
