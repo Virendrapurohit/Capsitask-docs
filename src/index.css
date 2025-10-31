@@ -28,7 +28,7 @@ body {
   flex: auto;
   flex-direction: column;
   min-height: 0;
-  background: #fbfbfb !important;
+  /* background: #fbfbfb !important; */
 }
 
 .ant-menu-light.ant-menu-inline
@@ -48,10 +48,7 @@ body {
   color: #4285f4;
 }
 
-.ant-anchor-wrapper:not(
-    .ant-anchor-wrapper-horizontal
-  )
-  .ant-anchor::before {
+:where(.css-1nrkf5c).ant-anchor-wrapper:not(.ant-anchor-wrapper-horizontal) .ant-anchor::before {
   position: absolute;
   inset-inline-start: 0;
   top: 0;

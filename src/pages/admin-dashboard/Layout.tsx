@@ -455,6 +455,7 @@ const Adminlayout: React.FC = () => {
           <Col xs={0} md={6} lg={4}>
             <div style={{ position: "sticky", top: 80 }}>
               <Anchor
+              
                 affix={false}
                 getContainer={() => scrollContainerRef.current!}
                 onClick={(e, link) => {
