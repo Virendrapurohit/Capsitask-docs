@@ -63,7 +63,7 @@ const AppHeader: React.FC<{
             />
           )}
           <h3 style={{ margin: "0px", fontWeight: 500 }}>
-            Capsitask Documentation
+            Helping Center
           </h3>
           <Button
             type="text"

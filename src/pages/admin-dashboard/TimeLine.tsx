@@ -9,7 +9,7 @@ const TimeLine: React.FC = () => {
 
   return (
     <Layout>
-      <Content style={{ padding: "24px" }}>
+      <Content >
         <Row justify="center" gutter={[24, 24]}>
           <Col xs={24} md={18} lg={20}>
             <div
