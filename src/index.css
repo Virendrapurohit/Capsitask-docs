@@ -1,7 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap");
 
 * {
-  font-family: "Outfit", sans-serif;
+  font-family: "Outfit", sans-serif !important;
   font-style: normal;
 }
 
@@ -9,6 +9,7 @@ body {
   margin: 0;
   padding: 0;
   overflow: hidden;
+  font-family: "Outfit", sans-serif !important;
 }
 
 ::-webkit-scrollbar {
@@ -36,4 +37,25 @@ body {
   > .ant-menu.ant-menu-inline
   .ant-menu-sub.ant-menu-inline {
   background: white !important;
+}
+
+:where(.css-dev-only-do-not-override-1nrkf5c).ant-menu-dark
+  .ant-menu-item-selected,
+:where(.css-dev-only-do-not-override-1nrkf5c).ant-menu-dark
+  > .ant-menu
+  .ant-menu-item-selected {
+  background-color: #4c3b63 !important;
+  color: #4285f4;
+}
+
+:where(.css-dev-only-do-not-override-1nrkf5c).ant-anchor-wrapper:not(
+    .ant-anchor-wrapper-horizontal
+  )
+  .ant-anchor::before {
+  position: absolute;
+  inset-inline-start: 0;
+  top: 0;
+  height: 100%;
+  border-inline-start: 2px solid #4c3b63 !important;
+  content: " ";
 }

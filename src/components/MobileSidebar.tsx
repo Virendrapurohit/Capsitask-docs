@@ -15,11 +15,13 @@ interface MobileHeaderProps {
   isDrawerVisible: boolean;
   toggleDrawer: () => void;
   isMobile: boolean;
+  isDarkTheme: boolean;
 }
 
 const MobileHeader: React.FC<MobileHeaderProps> = ({
   isDrawerVisible,
   toggleDrawer,
+  isDarkTheme,
 }) => {
   const navigate = useNavigate();
 
@@ -38,9 +40,10 @@ const MobileHeader: React.FC<MobileHeaderProps> = ({
       width={240}
     >
       <Menu
-        theme="light"
+        theme={isDarkTheme ? "dark" : "light"}
         style={{
           borderRight: "0px",
+          backgroundColor: isDarkTheme ? "#1b122b" : "#fff",
         }}
         mode="inline"
         defaultSelectedKeys={["/admin-dashboard/admindashboard"]}

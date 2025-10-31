@@ -1,15 +1,18 @@
-import React, { useState, useEffect } from "react";
-import { theme, Button } from "antd";
-import { MenuFoldOutlined, MenuUnfoldOutlined } from "@ant-design/icons";
+import React, { useEffect, useState } from "react";
+import { Button } from "antd";
+import {
+  SunOutlined,
+  MoonOutlined,
+  MenuUnfoldOutlined,
+  MenuFoldOutlined,
+} from "@ant-design/icons";
 import { Header } from "antd/es/layout/layout";
-import Search from "antd/es/transfer/search";
 import MobileHeader from "./MobileSidebar";
 
-const AppHeader: React.FC = () => {
-  const {
-    token: { colorBgContainer },
-  } = theme.useToken();
-
+const AppHeader: React.FC<{
+  toggleTheme: () => void;
+  isDarkTheme: boolean;
+}> = ({ toggleTheme, isDarkTheme }) => {
   const [isMobile, setIsMobile] = useState(false);
   const [isSidebarVisible, setIsSidebarVisible] = useState(false);
 
@@ -33,14 +36,13 @@ const AppHeader: React.FC = () => {
   const toggleSidebar = () => {
     setIsSidebarVisible(!isSidebarVisible);
   };
-
   return (
     <>
       <Header
         style={{
           padding: "0px 16px",
-          background: colorBgContainer,
-          borderBottom: "1px solid #ebeaf1",
+          background: isDarkTheme ? "#1b122b" : "#fff",
+          borderBottom: isDarkTheme ? "1px solid #3a2d47" : "1px solid #ebeaf1",
         }}
       >
         <div
@@ -60,17 +62,22 @@ const AppHeader: React.FC = () => {
               style={{ fontSize: "16px", width: 64, height: 64 }}
             />
           )}
-          <h3 style={{ margin: "0px" ,fontWeight:500 }}>Helping Center</h3>
-          <div>
-            <Search placeholder="Search" />
-          </div>
+          <h3 style={{ margin: "0px", fontWeight: 500 }}>
+            Capsitask Documentation
+          </h3>
+          <Button
+            type="text"
+            icon={isDarkTheme ? <SunOutlined /> : <MoonOutlined />}
+            onClick={toggleTheme}
+            style={{ fontSize: "18px" }}
+          />
         </div>
       </Header>
-
       <MobileHeader
         isDrawerVisible={isSidebarVisible}
         toggleDrawer={toggleSidebar}
         isMobile={isMobile}
+        isDarkTheme={isDarkTheme}
       />
     </>
   );

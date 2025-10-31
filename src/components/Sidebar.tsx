@@ -7,20 +7,14 @@ import { FcTimeline } from "react-icons/fc";
 import { FiCalendar } from "react-icons/fi";
 import { PiMicrosoftTeamsLogoLight } from "react-icons/pi";
 import { SettingOutlined, TeamOutlined } from "@ant-design/icons";
-import { Menu, theme } from "antd";
+import { Menu } from "antd";
 import Sider from "antd/es/layout/Sider";
 import { RiLayout2Line } from "react-icons/ri";
-const Sidebar: React.FC = () => {
+
+const Sidebar: React.FC<{ isDarkTheme: boolean }> = ({ isDarkTheme }) => {
   const navigate = useNavigate();
   const navigation = useLocation();
   const pathname = navigation.pathname;
-  const {
-    token: { colorBgContainer },
-  } = theme.useToken();
-
-  const handleMenuClick = (e: any) => {
-    navigate(e.key);
-  };
 
   return (
     <Sider
@@ -29,9 +23,9 @@ const Sidebar: React.FC = () => {
       collapsible
       collapsed={false}
       style={{
-        backgroundColor: "#fff",
+        backgroundColor: isDarkTheme ? "#1b122b" : "#fff",
         height: "100vh",
-        borderRight: "1px solid #ebeaf1",
+        borderRight: isDarkTheme ? "1px solid #3a2d47" : "1px solid #ebeaf1",
         overflow: "auto",
       }}
     >
@@ -40,7 +34,8 @@ const Sidebar: React.FC = () => {
         style={{
           padding: "3.5px",
           textAlign: "center",
-          borderBottom: "1px solid #ebeaf1",
+          backgroundColor: isDarkTheme ? "#1b122b" : "#fff",
+          borderBottom: isDarkTheme ? "1px solid #3a2d47" : "1px solid #ebeaf1",
         }}
       >
         <img
@@ -49,24 +44,21 @@ const Sidebar: React.FC = () => {
           alt="Logo"
         />
       </div>
+
       <Menu
-        theme="light"
+        theme={isDarkTheme ? "dark" : "light"}
         mode="inline"
         selectedKeys={[pathname]}
         defaultSelectedKeys={["/admin-dashboard/layout"]}
         defaultOpenKeys={["1"]}
-        onClick={handleMenuClick}
+        onClick={(e) => navigate(e.key)}
         style={{
+          backgroundColor: isDarkTheme ? "#1b122b" : "#fff",
           borderRight: 0,
-          backgroundColor: colorBgContainer,
           overflow: "auto",
           marginTop: 12,
         }}
         items={[
-          // {
-          //   key: "1",
-          //   label: "Overview",
-          //   children: [
           {
             key: "/admin-dashboard/layout",
             label: "Layout",
@@ -128,19 +120,6 @@ const Sidebar: React.FC = () => {
               <SettingOutlined style={{ color: "#4285f4", fontSize: 20 }} />
             ),
           },
-          //   ],
-          // },
-          // {
-          //   key: "2",
-          //   label: "Employee Panel",
-          //   children: [
-          //     {
-          //       key: "/user-dashboard/admindashboard",
-          //       label: "Dashboard",
-          //       icon: <RiDashboardLine size={18} />,
-          //     },
-          //   ],
-          // },
         ]}
       />
     </Sider>
