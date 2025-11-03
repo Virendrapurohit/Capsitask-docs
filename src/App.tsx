@@ -26,7 +26,7 @@ const App: React.FC = () => {
 
   useEffect(() => {
     const handleResize = () => {
-      if (window.innerWidth <= 1023) {
+      if (window.innerWidth <= 1200) {
         setIsSidebarVisible(false);
       } else {
         setIsSidebarVisible(true);

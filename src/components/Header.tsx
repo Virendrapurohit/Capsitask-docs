@@ -18,7 +18,7 @@ const AppHeader: React.FC<{
 
   useEffect(() => {
     const handleResize = () => {
-      const isMobileScreen = window.innerWidth <= 1023;
+      const isMobileScreen = window.innerWidth <= 1200;
       setIsMobile(isMobileScreen);
       if (!isMobileScreen) {
         setIsSidebarVisible(false);
@@ -62,9 +62,7 @@ const AppHeader: React.FC<{
               style={{ fontSize: "16px", width: 64, height: 64 }}
             />
           )}
-          <h3 style={{ margin: "0px", fontWeight: 500 }}>
-            Helping Center
-          </h3>
+          <h3 style={{ margin: "0px", fontWeight: 500 }}>Helping Center</h3>
           <Button
             type="text"
             icon={isDarkTheme ? <SunOutlined /> : <MoonOutlined />}
