@@ -5,7 +5,6 @@ import { RiDashboardLine } from "react-icons/ri";
 import { FaRegStar, FaRegChartBar } from "react-icons/fa";
 import { VscFeedback } from "react-icons/vsc";
 import { AiOutlineLayout } from "react-icons/ai";
-import { MdOutlineViewList } from "react-icons/md";
 import { PiMicrosoftTeamsLogoLight } from "react-icons/pi";
 import { FiCalendar } from "react-icons/fi";
 import { FcTimeline } from "react-icons/fc";
@@ -34,11 +33,29 @@ const MobileHeader: React.FC<MobileHeaderProps> = ({
     <Drawer
       styles={{ body: { padding: "5px" } }}
       placement="left"
-      title="Admin Panel"
+     closeIcon={
+      <div
+        className="logo-container"
+        style={{
+          padding: "3.5px",
+          textAlign: "center",
+          // backgroundColor: isDarkTheme ? "#1b122b" : "#fff",
+          borderBottom: isDarkTheme ? "1px solid #3a2d47" : "1px solid #ebeaf1",
+        }}
+      >
+        <img
+          style={{ height: 52, cursor: "pointer" }}
+          src={"/CapsiTask.png"}
+          alt="Logo"
+        />
+      </div>
+
+     }
       open={isDrawerVisible}
       onClose={toggleDrawer}
       width={240}
     >
+      
       <Menu
         theme={isDarkTheme ? "dark" : "light"}
         style={{
@@ -46,16 +63,20 @@ const MobileHeader: React.FC<MobileHeaderProps> = ({
           backgroundColor: isDarkTheme ? "#1b122b" : "#fff",
         }}
         mode="inline"
-        defaultSelectedKeys={["/admin-dashboard/admindashboard"]}
+        defaultSelectedKeys={["/admin-dashboard/overview"]}
         onClick={handleMenuClick}
         items={[
+          {
+            key: "/admin-dashboard/overview",
+            label: "Overview",
+          },
           {
             key: "/admin-dashboard/admindashboard",
             label: "Dashboard",
             icon: <RiDashboardLine size={18} />,
           },
           {
-            key: "/admin-dashboard/dashboard",
+            key: "/admin-dashboard/taskreview",
             label: "Task Review",
             icon: <FaRegStar size={18} />,
           },
@@ -66,13 +87,8 @@ const MobileHeader: React.FC<MobileHeaderProps> = ({
           },
           {
             key: "/admin-dashboard/board",
-            label: "Board",
+            label: "Board & Backlog",
             icon: <AiOutlineLayout size={18} />,
-          },
-          {
-            key: "/admin-dashboard/backlog",
-            label: "Backlog",
-            icon: <MdOutlineViewList size={18} />,
           },
           {
             key: "/admin-dashboard/people",
