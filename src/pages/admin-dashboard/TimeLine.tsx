@@ -11,7 +11,7 @@ const TimeLine: React.FC = () => {
     <Layout>
       <Content >
         <Row justify="center" gutter={[24, 24]}>
-          <Col xs={24} md={18} lg={20}>
+          <Col xs={24} md={18} lg={19} xl={19} xxl={20}>
             <div
               ref={scrollContainerRef}
               className="scrollable"
@@ -24,7 +24,7 @@ const TimeLine: React.FC = () => {
               }}
             >
               <Row justify="center" id="timeline">
-                <Col xs={24} md={20} lg={15}>
+                <Col xs={24} md={20} lg={20} xl={20} xxl={15}>
                   <Row>
                     <Col>
                       <Title
@@ -213,7 +213,7 @@ const TimeLine: React.FC = () => {
             </div>
           </Col>
 
-          <Col xs={0} md={6} lg={4}>
+          <Col xs={0} md={6} lg={5} xl={5} xxl={4}>
             <div style={{ position: "sticky", top: 80 }}>
               <Anchor
                 affix={false}

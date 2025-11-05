@@ -12,7 +12,7 @@ const Board: React.FC = () => {
       <Content >
         <Row justify="center" gutter={[24, 24]}>
           {/* Main Content */}
-          <Col xs={24} md={18} lg={20}>
+          <Col xs={24} md={18} lg={19} xl={19} xxl={20}>
             <div
               ref={scrollContainerRef}
               className="scrollable"
@@ -24,8 +24,8 @@ const Board: React.FC = () => {
                 scrollbarWidth: "none",
               }}
             >
-              <Row justify="center" id="board&backlog">
-                <Col xs={24} md={20} lg={15}>
+              <Row justify="center" id="board-backlog">
+                <Col xs={24} md={20} lg={20} xl={20} xxl={15}>
                   <Row>
                     <Col>
                       <Title level={1} style={{ margin: 0, fontWeight: 500 }}>
@@ -35,7 +35,7 @@ const Board: React.FC = () => {
                   </Row>
 
                   {/* <div id="sidebar"> */}
-                  <Title level={3} id="board&backlog">
+                  <Title level={3} id="board-backlog">
                     1. Board
                   </Title>
                   <Paragraph
@@ -86,7 +86,7 @@ const Board: React.FC = () => {
                     status.
                   </Paragraph>
                   <Card
-                    id="board&backlog-filter"
+                    id="board-backlog-filter"
                     style={{
                       background: "#f3f3ffff",
                       borderRadius: 8,
@@ -177,7 +177,7 @@ const Board: React.FC = () => {
                         the timeline shows logs related to that person:
                       </li>
                       <Card
-                        id="board&backlog-task-details"
+                        id="board-backlog-task-details"
                         style={{
                           background: "#f3f3ffff",
                           borderRadius: 8,
@@ -188,7 +188,7 @@ const Board: React.FC = () => {
                       </Card>
                     </ul>
 
-                    <Title level={3} id="board&backlog-task-details">
+                    <Title level={3} id="board-backlog-task-details">
                       4. Board & Backlog Task Details
                     </Title>
                     <ul style={{ marginLeft: 20, marginTop: 5 }}>
@@ -353,7 +353,7 @@ const Board: React.FC = () => {
             </div>
           </Col>
 
-          <Col xs={0} md={6} lg={4}>
+          <Col xs={0} md={6} lg={5} xl={5} xxl={4}>
             <div style={{ position: "sticky", top: 80 }}>
               <Anchor
                 affix={false}
@@ -369,18 +369,18 @@ const Board: React.FC = () => {
                 }}
                 items={[
                   {
-                    href: "#board&backlog",
+                    href: "#board-backlog",
                     title: "Board & Backlog Section",
-                    key: "board&backlog",
+                    key: "board-backlog",
                     children: [
                       {
-                        href: "#board&backlog-filter",
-                        key: "board&backlog-filter",
+                        href: "#board-backlog-filter",
+                        key: "board-backlog-filter",
                         title: "Board & Backlog Filter",
                       },
                       {
-                        href: "#board&backlog-task-details",
-                        key: "board&backlog-task-details",
+                        href: "#board-backlog-task-details",
+                        key: "board-backlog-task-details",
                         title: "Board & Backlog Task Details",
                       },
                     ],

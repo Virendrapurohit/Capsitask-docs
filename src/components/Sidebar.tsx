@@ -10,7 +10,7 @@ import { SettingOutlined, TeamOutlined } from "@ant-design/icons";
 import { Menu } from "antd";
 import Sider from "antd/es/layout/Sider";
 import { RiLayout2Line } from "react-icons/ri";
-
+import { LuChartNoAxesColumnDecreasing } from "react-icons/lu";
 const Sidebar: React.FC<{ isDarkTheme: boolean }> = ({ isDarkTheme }) => {
   const navigate = useNavigate();
   const navigation = useLocation();
@@ -59,7 +59,7 @@ const Sidebar: React.FC<{ isDarkTheme: boolean }> = ({ isDarkTheme }) => {
           marginTop: 12,
         }}
         items={[
-            {
+          {
             key: "/admin-dashboard/overview",
             label: "Overview",
             // icon: <RiLayout2Line size={20} />,
@@ -98,6 +98,11 @@ const Sidebar: React.FC<{ isDarkTheme: boolean }> = ({ isDarkTheme }) => {
             key: "/admin-dashboard/reports",
             label: "Reports",
             icon: <FaRegChartBar size={20} />,
+          },
+          {
+            key: "/admin-dashboard/taskdetails",
+            label: "Task Details",
+            icon: <LuChartNoAxesColumnDecreasing  size={20} />,
           },
           {
             key: "/admin-dashboard/teams",

@@ -9,7 +9,7 @@ import { PiMicrosoftTeamsLogoLight } from "react-icons/pi";
 import { FiCalendar } from "react-icons/fi";
 import { FcTimeline } from "react-icons/fc";
 import { SettingOutlined, TeamOutlined } from "@ant-design/icons";
-
+import { LuChartNoAxesColumnDecreasing } from "react-icons/lu";
 interface MobileHeaderProps {
   isDrawerVisible: boolean;
   toggleDrawer: () => void;
@@ -99,6 +99,11 @@ const MobileHeader: React.FC<MobileHeaderProps> = ({
             key: "/admin-dashboard/reports",
             label: "Reports",
             icon: <FaRegChartBar size={18} />,
+          },
+                 {
+            key: "/admin-dashboard/taskdetails",
+            label: "Task Details",
+            icon: <LuChartNoAxesColumnDecreasing  size={20} />,
           },
           {
             key: "/admin-dashboard/teams",

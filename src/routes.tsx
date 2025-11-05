@@ -11,6 +11,7 @@ import CalendarCreate from "./pages/admin-dashboard/Calendar";
 import TimeLine from "./pages/admin-dashboard/TimeLine";
 import Settings from "./pages/admin-dashboard/Settings";
 import OverviewProject from "./pages/admin-dashboard/Overview";
+import TaskDetails from "./pages/admin-dashboard/TaskDetails";
 
 const AppRoutes = () => {
   return (
@@ -28,6 +29,7 @@ const AppRoutes = () => {
       <Route path="/admin-dashboard/board" element={<Board />} />
       <Route path="/admin-dashboard/people" element={<People />} />
       <Route path="/admin-dashboard/reports" element={<Reports />} />
+        <Route path="/admin-dashboard/taskdetails" element={<TaskDetails />} />
       <Route path="/admin-dashboard/teams" element={<Teams />} />
       <Route path="/admin-dashboard/calendar" element={<CalendarCreate />} />
       <Route path="/admin-dashboard/timeline" element={<TimeLine />} />

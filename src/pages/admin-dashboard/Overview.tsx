@@ -22,7 +22,7 @@ const OverviewProject: React.FC = () => {
       <Content>
         <Row justify="center" gutter={[24, 24]}>
           {/* Main Content */}
-          <Col xs={24} md={18} lg={20}>
+          <Col xs={24} md={18} lg={19} xl={19} xxl={20}>
             <div ref={scrollContainerRef}>
               <Row justify="center" id="sidebar">
                 <Col xs={24} md={20} lg={14}>
@@ -154,7 +154,7 @@ const OverviewProject: React.FC = () => {
             </div>
           </Col>
 
-          <Col xs={0} md={6} lg={4}>
+          <Col xs={0} md={6} lg={5} xl={5} xxl={4}>
             <div style={{ position: "sticky", top: 80 }}>
               <Anchor
                 affix={false}
